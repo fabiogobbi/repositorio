@@ -176,6 +176,7 @@ public class ClienteController{
 	        if(SessionAttributes.TIPO_ACAO_INCLUI.equals(tipoAcao)){
 	        	cliente.setTipoAcesso(TipoAcesso.ACESSO_NORMAL.getTipoAcesso());
 	        	this.clienteRemote.adicionarClienteConsumidor(cliente);
+	        	request.setAttribute(SessionAttributes.TITULO_MENSAGEM, "Sucesso.");
 	            request.setAttribute(SessionAttributes.SUCESSO, "Cliente adicionado com sucesso");
 	            return Views.LOGIN;
 	        }else if(SessionAttributes.TIPO_ACAO_ATUALIZA.equals(tipoAcao)){
