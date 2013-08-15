@@ -1,6 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <div id="conteudo">
-	<form id="formLogin" action="" method="get">
+	<form id="formLogin" action="<spring:url value="/j_spring_security_check"/>" method="get">
 	    <h2>Login</h2>
 	    <br/>
 	    Digite seu email:<br/>

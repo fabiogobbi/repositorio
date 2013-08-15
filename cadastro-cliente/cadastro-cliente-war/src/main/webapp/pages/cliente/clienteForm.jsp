@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <div id="conteudo_baixo">
 	<h2>Conteúdo</h2>
-	<form:form method="get" action="" modelAttribute="cliente" >
+	<form:form method="get" action="/cadastro_cliente/cliente/clienteEfetiva" modelAttribute="cliente" >
 	
 		<form:hidden path="ativo" />
         <form:hidden path="tipoAcesso" />
@@ -52,7 +52,6 @@
                 $(function() {
                        $("#btnCancelar").click(function(){
                            $("#cliente").attr("action","${urlCancelar}");
-                           $("#cliente").attr("method","get");
                            $("#cliente").submit();   
                        });
 
@@ -60,8 +59,6 @@
                        $("#btnConfirmar").click(function(){
                     	   event.preventDefault();
                            if(ValidaSenha()){
-                               $("#cliente").attr("action","/cadastro_cliente/cliente/clienteEfetiva");
-                               $("#cliente").attr("method","get");
                                $("#cliente").submit();   
                            }
                        });

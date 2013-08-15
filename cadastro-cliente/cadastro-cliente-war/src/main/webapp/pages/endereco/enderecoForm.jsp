@@ -51,11 +51,11 @@
                        $("#cep").blur(function() {
                               var cep = $("#cep").val();
                               var controlCorreioAPI = "http://cep.correiocontrol.com.br/" + cep + ".json";
-
+                              jQuery.support.cors = true;
                               $.getJSON(controlCorreioAPI, function() {
                               })
                               .fail(function() {
-                                      alert("CEP não encontrado.");
+                                      alert("Nao foi possivel recuperar o CEP.");
                               })
                               .done(function(json) {
                                     $("#logradouro").val(json.logradouro);
@@ -69,7 +69,6 @@
 
                        $("#btnCancelar").click(function(){
                            $("#endereco").attr("action","<spring:url value="/endereco/enderecoLista"/>");
-                           $("#endereco").attr("method","get");
                            $("#endereco").submit();   
                        });
 
