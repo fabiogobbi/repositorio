@@ -1,0 +1,24 @@
+<div id="resultado"></div>
+<button id="teste">teste</button>
+<script type="text/javascript" src="/cadastro-cliente-war/static/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#teste').click(function() {
+		var request = $.ajax({
+		  url: "http://localhost:8080/cadastro-cliente-war/cliente/teste",
+		  type: "GET",
+		  dataType: "json"
+		});
+		 
+		request.done(function(msg) {
+			$('#resultado').html(msg);
+		    alert( msg );
+		});
+		 
+		request.fail(function(jqXHR, textStatus) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+});
+</script>
+

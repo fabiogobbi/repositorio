@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.kwikemart</groupId>
+  <artifactId>cadastro-cliente</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <name>cadastro-cliente</name>
+  
+  	<!-- Garante que tanto o compilador do Maven, quanto do PMD utilizem a mesma versão de JDK -->
+	<properties>
+		<project.build.sourceEncodind>UTF-8</project.build.sourceEncodind>
+		<compileSource>1.6</compileSource>
+	</properties>
+  
+  	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Repositorio de Releases</name>
+			<url>http://repo1.maven.org/maven2/</url>
+		</repository>
+
+	</distributionManagement>
+  
+  	<repositories>
+		<repository>
+			<id>central</id>
+			<url>http://repo1.maven.org/maven2/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>http://repo1.maven.org/maven2/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+  
+  	<modules>
+		<module>cadastro-cliente-ejb</module>
+		<module>cadastro-cliente-war</module>
+	</modules>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.10</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+			</plugin>
+   			<plugin>
+     			<groupId>org.apache.maven.plugins</groupId>
+     			<artifactId>maven-pmd-plugin</artifactId>
+   			</plugin>
+    	</plugins>
+	</build>
+</project>

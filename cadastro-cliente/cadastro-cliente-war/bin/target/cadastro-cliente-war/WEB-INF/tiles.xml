@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+	<tiles-definitions>
+    
+        <!-- Layout Login -->
+        <definition name="layout.base.login.definition" template="/pages/layout/layout_login.jsp">
+            <put-attribute name="titulo" value="Kwik-E-Mart e-Commerce" />
+            <put-attribute name="cabecalho" value="/pages/layout/cabecalho_login.jsp" />
+            <put-attribute name="imports" value="/pages/layout/imports_login.jsp" />
+            <put-attribute name="mensagens" value="/pages/layout/mensagens.jsp" />
+            <put-attribute name="conteudo" value="" />
+            <put-attribute name="conteudo_baixo" value="" />
+            <put-attribute name="rodape" value="/pages/layout/rodape.jsp" />
+        </definition>
+    
+        <!-- Layout Interno -->
+        <definition name="layout.base.definition" template="/pages/layout/layout.jsp">
+            <put-attribute name="titulo" value="Kwik-E-Mart e-Commerce" />
+            <put-attribute name="imports" value="/pages/layout/imports.jsp" />
+            <put-attribute name="cabecalho" value="/pages/layout/cabecalho.jsp" />
+            <put-attribute name="mensagens" value="/pages/layout/mensagens.jsp" />
+            <put-attribute name="menu" value="/pages/layout/menu.jsp" />
+            <put-attribute name="conteudo" value="" />
+            <put-attribute name="rodape" value="/pages/layout/rodape.jsp" />
+        </definition>
+        
+        <!-- Login INI -->
+        
+        <definition name="clienteLogin" extends="layout.base.login.definition">
+            <put-attribute name="conteudo" value="/pages/login/login.jsp" />
+            <put-attribute name="conteudo_baixo" value="/pages/login/loginFacebook.jsp" />
+        </definition>
+        
+        <definition name="mensagem" extends="layout.base.login.definition">
+            <put-attribute name="conteudo_baixo" value="/pages/login/loginMensagem.jsp" />
+        </definition>
+        
+        <definition name="redirectLogin" extends="layout.base.login.definition">
+            <put-attribute name="conteudo_baixo" value="/pages/login/loginRedirect.jsp" />
+        </definition>
+        
+        <definition name="clienteResetSenha" extends="layout.base.login.definition">
+            <put-attribute name="conteudo_baixo" value="/pages/cliente/clienteResetSenha.jsp" />
+        </definition>
+        
+        <!-- Login FIM -->
+        
+        <!-- Cliente INI -->
+
+	    <definition name="clienteHome" extends="layout.base.definition">
+	        <put-attribute name="conteudo" value="/pages/cliente/clienteHome.jsp" />
+	    </definition>
+	    
+	    <definition name="clienteForm" extends="layout.base.login.definition">
+        	<put-attribute name="conteudo_baixo" value="/pages/cliente/clienteForm.jsp" />
+    	</definition>
+    	
+    	<definition name="clienteFormBase" extends="layout.base.definition">
+            <put-attribute name="conteudo" value="/pages/cliente/clienteForm.jsp" />
+        </definition>
+    	
+    	<!-- Cliente FIM -->
+    	
+    	<definition name="enderecoLista" extends="layout.base.login.definition">
+            <put-attribute name="conteudo_baixo" value="/pages/cliente/enderecoLista.jsp" />
+        </definition>
+    	
+    	<!-- Endereco INI -->
+    	
+        <definition name="enderecoLista" extends="layout.base.definition">
+            <put-attribute name="conteudo" value="/pages/endereco/enderecoLista.jsp" />
+        </definition>    	
+                
+        <definition name="enderecoForm" extends="layout.base.definition">
+            <put-attribute name="conteudo" value="/pages/endereco/enderecoForm.jsp" />
+        </definition>    
+    	
+    	<!-- Endereco FIM -->
+</tiles-definitions>

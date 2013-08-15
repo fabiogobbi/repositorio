@@ -1,0 +1,146 @@
+body {
+    font: 1em/150% Arial, Helvetica, sans-serif;
+    background: #fff url(/cadastro_cliente/static/img/fundo_azul_body.jpg) repeat-x left top;
+    
+}
+a {
+    color: #669;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font: bold 36px/100% Arial, Helvetica, sans-serif;
+}
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#areatotal {
+    padding: 5px;
+    width: 960px;
+    margin: 20px auto;
+}
+#cabecalho {
+    height: 180px;
+}
+#menu {
+    padding: 10px;
+    width: 180px;
+    float: left;
+}
+#conteudo {
+    padding: 10px;
+    width: 730px;
+    float: right;
+}
+#rodape {
+    clear: both;
+}
+
+#erro {
+    float: right;
+}
+
+#sucesso {
+    float: right;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+    
+    #areatotal {
+        width: 94%;
+    }
+    #menu {
+        width: 27%;
+    }
+    #conteudo {
+        width: 66%;
+    }
+
+}
+
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+
+    #menu {
+        width: auto;
+        float: none;
+    }
+    #conteudo {
+        width: auto;
+        float: none;
+    }
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+    #cabecalho {
+        height: auto;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    #conteudo {
+        display: auto;
+    }
+
+}
+
+/* border & guideline (you can ignore these) */
+#cabecalho {
+    background: #f6f6f6;
+}
+
+#menu {
+    background: #f8f8f8;
+}
+#conteudo {
+    background: #f0efef;
+}
+#cabecalho, #menu, #conteudo {
+    margin-bottom: 5px;
+}
+#areatotal, #cabecalho, #menu, #conteudo, #rodape {
+    border: solid 1px #ccc;
+}
+
+#rodape{
+    background: #f6f6f6;
+}
+
+.button{ 
+    font-size:11px; 
+    font-family:Verdana,Helvetica; 
+    font-weight:bold; 
+    color:white; 
+    background:#638cb5; 
+    border:0px; 
+    height:25px; 
+} 
+
+
+.error{
+    color: red;
+    border: solid 1px #ccc;
+    padding:0px 0 10px 10px;
+    margin: 0px 0 5px 0;
+    background: #f0efef; 
+    width: auto;
+}
+
+.sucesso{
+    color: #33CC33;
+    border: solid 1px #ccc;
+    padding:0px 0 10px 10px;
+    margin: 0px 10px 5px 0;
+    background: #f0efef; 
+    width: auto;
+}

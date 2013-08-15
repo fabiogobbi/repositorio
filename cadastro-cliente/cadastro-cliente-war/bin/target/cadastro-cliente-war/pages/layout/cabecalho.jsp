@@ -1,0 +1,1 @@
+<h2>Caro(a) ${cliente.nome}, bem vindo ao Kwik-E-Mart e-Commerce</h2>
