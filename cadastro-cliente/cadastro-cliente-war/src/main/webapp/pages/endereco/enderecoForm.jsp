@@ -36,7 +36,7 @@
     <br/><br/>
     
     <form:label path="estado">Estado</form:label>
-    <form:input path="estado" />
+    <form:input path="estado" size="2" />
     <br/><br/>
 	<br/><br/>
 	

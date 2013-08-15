@@ -27,18 +27,18 @@ public class Endereco implements Serializable {
     private Long id;
     
     @NotNull (message="Preencha a descricao.")
-    @Pattern(regexp="(?i)^[A-Za-z0-9 ]{0,40}", message="Descricao invalido.")
+    @Pattern(regexp="(?i)^[a-z A-Z0-9éúíóáÉÚÍÓÁèùìòàÈÙÌÒÀõãñÕÃÑêûîôâÊÛÎÔÂëÿüïöäËYÜÏÖÄ\\s\\'\\-]{0,40}", message="Descricao invalido.")
     private String descricao = null;
     
     @NotNull (message="Preencha o logradouro.")
-    @Pattern(regexp="(?i)^[A-Za-z0-9 ]{0,100}", message="Logradouro invalido.")
+    @Pattern(regexp="(?i)^[a-z A-Z0-9éúíóáÉÚÍÓÁèùìòàÈÙÌÒÀõãñÕÃÑêûîôâÊÛÎÔÂëÿüïöäËYÜÏÖÄ\\s\\'\\-]{0,100}", message="Logradouro invalido.")
     private String logradouro = null;
     
     @NotNull (message="Preencha o numero.")
     @Min(value=1L) @Max(value=Long.MAX_VALUE)
     private Long numero = null;
     
-    @Pattern(regexp="(?i)^[A-Za-z0-9 ]{0,40}", message="Complemento invalido.")
+    @Pattern(regexp="(?i)^[a-z A-Z0-9éúíóáÉÚÍÓÁèùìòàÈÙÌÒÀõãñÕÃÑêûîôâÊÛÎÔÂëÿüïöäËYÜÏÖÄ\\s\\'\\-]{0,40}", message="Complemento invalido.")
     private String complemento = null;
     
     @NotNull (message="Preencha o cep.")
@@ -46,11 +46,11 @@ public class Endereco implements Serializable {
     private String cep= null;
     
     @NotNull (message="Preencha o bairro.")
-    @Pattern(regexp="(?i)^[A-Za-z0-9 ]{0,20}", message="Bairro invalido.")
+    @Pattern(regexp="(?i)^[a-z A-Z0-9éúíóáÉÚÍÓÁèùìòàÈÙÌÒÀõãñÕÃÑêûîôâÊÛÎÔÂëÿüïöäËYÜÏÖÄ\\s\\'\\-]{0,20}", message="Bairro invalido.")
     private String bairro= null;
     
     @NotNull (message="Preencha a cidade.")
-    @Pattern(regexp="(?i)^[A-Za-z0-9 ]{0,20}", message="Cidade invalido.")
+    @Pattern(regexp="(?i)^[a-z A-Z0-9éúíóáÉÚÍÓÁèùìòàÈÙÌÒÀõãñÕÃÑêûîôâÊÛÎÔÂëÿüïöäËYÜÏÖÄ\\s\\'\\-]{0,20}", message="Cidade invalido.")
     private String cidade= null;
     
     @NotNull (message="Preencha o estado.")

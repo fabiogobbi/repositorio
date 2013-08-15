@@ -35,9 +35,6 @@ public class Cliente implements Serializable{
     @Pattern(regexp=".+@.+\\.[a-z]+", message="E-mail invalido.")
     private String email;
     
-    
-    //"^(?=\\s*\\S).*$"
-    
     @NotNull(message="Preencha a senha.")
     @Pattern(regexp="(?i)^[a-zA-Z0-9 ]{6,8}$", message="Senha invalida.")
     private String senha;
@@ -46,11 +43,11 @@ public class Cliente implements Serializable{
     private String confirmaSenha;
     
     @NotNull (message="Preencha o nome.")
-    @Pattern(regexp="(?i)^[A-Z a-z]{0,20}", message="Nome invalido.")
+    @Pattern(regexp="(?i)^[a-z A-Z0-9éúíóáÉÚÍÓÁèùìòàÈÙÌÒÀõãñÕÃÑêûîôâÊÛÎÔÂëÿüïöäËYÜÏÖÄ\\s\\'\\-]{0,20}", message="Nome invalido.")
     private String nome;
     
     @NotNull(message="Preencha o sobrenome.")
-    @Pattern(regexp="(?i)^[A-Z a-z]{0,40}", message="Sobrenome invalido.")
+    @Pattern(regexp="(?i)^[a-z A-Z0-9éúíóáÉÚÍÓÁèùìòàÈÙÌÒÀõãñÕÃÑêûîôâÊÛÎÔÂëÿüïöäËYÜÏÖÄ\\s\\'\\-]{0,40}", message="Sobrenome invalido.")
     private String sobreNome;
     
     @NotNull (message="Preencha o cpf.")

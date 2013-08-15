@@ -28,6 +28,7 @@ STRUCTURE
 }
 #cabecalho {
     height: 50px;
+    padding: 5px;
 }
 #conteudo {
 	padding: 10px;
@@ -41,6 +42,7 @@ STRUCTURE
 }
 #rodape {
     clear: both;
+    padding: 5px;
 }
 
 /************************************************************************************
